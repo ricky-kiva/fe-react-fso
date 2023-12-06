@@ -8,13 +8,16 @@ const Hello = (props) => {
 }
 
 const App = () => {
-  const name = "Geralt of Rivia"
-  const level = 48
+  const characters = [
+    { name: "Rickyslash", level: 8 },
+    { name: "Geralt of Rivia", level: 48 }
+  ]
+
   return (
     <>
       <h1>Greetings</h1>
-      <Hello name="Rickyslash" level={2 + 6}/>
-      <Hello name={name} level={level} />
+      <Hello name={characters[0].name} level={characters[0].level}/>
+      <Hello name={characters[1].name} level={characters[1].level} />
     </>
   )
 }
