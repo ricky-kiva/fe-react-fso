@@ -1,8 +1,11 @@
-const Hello = (props) => {
-  console.log(props)
+const Hello = ({ name, level }) => {
+
+  const playedSince = () => new Date().getFullYear() - level
+
   return (
   <>
-    <p>Hello {props.name}, you are level {props.level}!</p>
+    <p>Hello {name}, you are level {level}!</p>
+    <p>Game&apos;s pretty though, need a year to step-up 1 level. So you play since {playedSince()}?</p>
   </>
   )
 }
