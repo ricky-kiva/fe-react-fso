@@ -28,9 +28,15 @@ const App = () => {
     }
   }
 
-  const CustomButton = ({handleClick, text }) =>
-    <button onClick={handleClick}>{text}</button>
+  // write `debugger` to debug code via source code
+  // debugger
 
+  const CustomButton = (props) => {
+    console.log("Button props:", props)
+    const { handleClick, text } = props
+    return ( <button onClick={handleClick}>{text}</button> )
+  }
+  
   return (
     <div>
       {left}&nbsp;
